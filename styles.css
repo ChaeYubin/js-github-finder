@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.full-container {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+.section-container {
+  max-width: 800px;
+}
+
+footer {
+  height: 50px;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+footer p {
+  margin: 0;
+}
+
+.badge {
+  line-height: 1rem;
+  border-radius: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+}
+
+.view-btn {
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}

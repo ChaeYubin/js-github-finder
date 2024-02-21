@@ -8,39 +8,106 @@
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cosmo/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <nav>Github Finder</nav>
-    <div class="search-container">
-      <h2>Search GitHub Users</h2>
-      <p>Enter a username to fetch a user profile and repos</p>
-      <input type="text" />
-    </div>
-    <div class="profile">
-      <div class="left">
-        <div>이미지</div>
-        <button>View Profile</button>
-      </div>
-      <div class="right">
-        <div class="status">
-          <div>Public Repos: 53</div>
-          <div>Public Gists: 0</div>
-          <div>Followers: 1200</div>
-          <div>Following: 0</div>
+    <div class="full-container">
+      <nav class="navbar bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Github Finder</a>
         </div>
-        <div>정보 테이블</div>
+      </nav>
+      <div class="section-container mx-auto mt-3">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3 class="mt-2 fw-bold fs-1">Search GitHub Users</h3>
+            <div class="form-group">
+              <label class="form-label mb-2 text-secondary"
+                >Enter a username to fetch a user profile and repos</label
+              >
+              <div class="form-group">
+                <div class="input-group mb-1">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="username"
+                    aria-label="username"
+                    aria-describedby="search-button"
+                  />
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="search-button"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile card mb-4">
+          <div class="card-body d-flex p-3 gap-3">
+            <div class="profile-left d-flex flex-column me-2">
+              <img src="https://via.placeholder.com/200x200" alt="샘플이미지" />
+              <button type="button" class="btn view-btn btn-primary mt-2">
+                View Profile
+              </button>
+            </div>
+            <div class="profile-right d-flex flex-column flex-grow-1">
+              <div class="profile-badges d-flex gap-1 mb-3">
+                <span class="badge bg-primary">Primary</span>
+                <span class="badge bg-success">Secondary</span>
+                <span class="badge bg-dark">Success</span>
+                <span class="badge bg-info">Success</span>
+              </div>
+              <ul class="profile-info-list list-group w-100">
+                <ul class="list-group-item">
+                  리스트1
+                </ul>
+                <ul class="list-group-item">
+                  리스트1
+                </ul>
+                <ul class="list-group-item">
+                  리스트1
+                </ul>
+                <ul class="list-group-item">
+                  리스트1
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="fw-semibold">Latest Repos</h3>
+        <div class="repository-card card mb-3">
+          <div class="card-body d-flex">
+            <a href="#" class="flex-grow-1 card-link">reponitory name</a>
+            <div class="repository-badges d-flex gap-1 flex-grow-1">
+              <span class="badge bg-primary">Primary</span>
+              <span class="badge bg-success">Secondary</span>
+              <span class="badge bg-dark">Success</span>
+            </div>
+          </div>
+        </div>
+        <div class="repository-card card mb-3">
+          <div class="card-body d-flex">
+            <a href="#" class="flex-grow-1 card-link">reponitory name</a>
+            <div class="repository-badges d-flex gap-1 flex-grow-1">
+              <span class="badge bg-primary">Primary</span>
+              <span class="badge bg-success">Secondary</span>
+              <span class="badge bg-dark">Success</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <h3>Lates Repos</h3>
-    <div>
-      <p>reponitory name</p>
-      <div class="status">
-        <div>Stars: 1</div>
-        <div>Watchers: 1</div>
-        <div>Forks: 1</div>
-      </div>
-    </div>
-    <footer>Github Finder &copy;</footer>
+    <footer
+      class="bg-light w-100 d-flex align-items-center justify-content-center"
+    >
+      <p>Github Finder &copy;</p>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
