@@ -43,3 +43,9 @@ footer p {
 a {
   text-decoration: none;
 }
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
