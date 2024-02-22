@@ -1,14 +1,13 @@
 // 동적으로 생성될 UI 작업을 처리하는 클래스
 export default class UI {
-  constructor({ profile, repos }) {
-    this.profile = profile;
-    this.repos = repos;
+  constructor() {
+    this.searchResultContainer = document.querySelector(".search-result");
   }
 
   displayProfile(profile) {
     const memberSince = profile.created_at.slice(0, 10);
 
-    return `<div class="profile-container card mb-4">
+    this.searchResultContainer.innerHTML = `<div class="profile-container card mb-4">
     <div class="card-body d-flex p-3 gap-3">
       <div class="profile-left d-flex flex-column me-2">
         <img
@@ -79,6 +78,10 @@ export default class UI {
 
     const repoCards = repoInfoArray.join("");
 
-    return `<h3 class="fw-semibold">Latest Repos</h3>${repoCards}</div>`;
+    this.searchResultContainer.innerHTML += `<h3 class="fw-semibold">Latest Repos</h3>${repoCards}</div>`;
+  }
+
+  clearProfile() {
+    this.searchResultContainer.innerHTML = "";
   }
 }

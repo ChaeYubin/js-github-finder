@@ -4,15 +4,18 @@ export default class GithubSearchAPI {
     this.base_url = "https://api.github.com/users/";
   }
 
-  async getProfile(name) {
-    const response = await fetch(`${this.base_url}${name}`);
-    const profile = await response.json();
-    return profile;
-  }
+  async getUser(username) {
+    const profileResponse = await fetch(`${this.base_url}${username}`);
+    const repoResponse = await fetch(
+      `${this.base_url}${username}/repos?sort=created`
+    );
 
-  async getRepos(name) {
-    const response = await fetch(`${this.base_url}${name}/repos?sort=created`);
-    const repos = await response.json();
-    return repos;
+    const profile = await profileResponse.json();
+    const repos = await repoResponse.json();
+
+    return {
+      profile,
+      repos,
+    };
   }
 }
