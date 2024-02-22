@@ -21,13 +21,17 @@ async function displayUserInfo(username) {
     return;
   }
 
-  githubSearchAPI.getUser(username).then((user) => {
-    if (user.profile.message === "Not Found") {
-      alert("User not found");
-      ui.clearProfile();
-    } else {
-      ui.displayProfile(user.profile);
-      ui.displayRepos(user.repos);
-    }
-  });
+  ui.displayLoading();
+
+  setTimeout(() => {
+    githubSearchAPI.getUser(username).then((user) => {
+      if (user.profile.message === "Not Found") {
+        alert("User not found");
+        ui.clearProfile();
+      } else {
+        ui.displayProfile(user.profile);
+        ui.displayRepos(user.repos);
+      }
+    });
+  }, 2000);
 }

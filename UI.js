@@ -84,4 +84,8 @@ export default class UI {
   clearProfile() {
     this.searchResultContainer.innerHTML = "";
   }
+
+  displayLoading() {
+    this.searchResultContainer.innerHTML = `<div class="d-flex justify-content-center mt-5"><div class="dot-flashing"></div></div>`;
+  }
 }
