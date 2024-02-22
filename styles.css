@@ -15,7 +15,7 @@ body {
 }
 
 .section-container {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 footer {
@@ -48,4 +48,12 @@ a {
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+
+.repository-name {
+  width: 250px;
+}
+
+.blog-link-text {
+  color: unset;
 }
