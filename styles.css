@@ -57,3 +57,24 @@ a {
 .blog-link-text {
   color: unset;
 }
+
+.dot-flashing {
+  /* color: rgb(66, 126, 220); */
+  color: var(--bs-primary);
+  background-color: var(--bs-primary);
+}
+
+.dot-flashing::after {
+  background-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: var(--bs-primary);
+  }
+  50%,
+  100% {
+    background-color: #277fe36b;
+  }
+}
